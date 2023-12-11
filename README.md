@@ -1,4 +1,4 @@
-# Golf AI Vision
+# Python/C++ project template
 
 This is a template for a python/C++ monorepo.
 
