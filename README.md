@@ -47,13 +47,13 @@ If this does not succeed, please follow https://docs.github.com/en/authenticatio
 
 Then, clone the fork:
 ```shell-session
-git clone git@github.com:[GH_USER]/gav.git
-cd gav
+git clone git@github.com:[GH_USER]/template.git
+cd template
 ```
 
 Add upstream for future merging with the main fork:
 ```shell-session
-git remote add upstream git@github.com:GolfAIVision/gav.git
+git remote add upstream git@github.com:example/example.git
 ```
 
 We use Poetry to manage Python dependencies.
@@ -103,7 +103,7 @@ $ git submodule update --init --recursive
 
 You need to do this for the initial setup and every time there are changes to the backend.
 
-The C++ layer is called "foundation", and the code resides under `src/gav/foundation`.
+The C++ layer is called "foundation", and the code resides under `src/project/foundation`.
 
 To build, you can run:
 
@@ -225,5 +225,3 @@ Please refer to the `Tracy` documentation for details on how to build and use th
 
 
 ### Known Issues
-
-

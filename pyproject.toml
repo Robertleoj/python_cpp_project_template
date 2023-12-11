@@ -91,7 +91,7 @@ exclude = '''
 '''
 
 [tool.pytest.ini_options]
-testpaths = ["tests", "src/gav/utils"]
+testpaths = ["tests", "src/project/utils"]
 # we use Sybil to find doctests.
 # by default, don't run end_to_end_workstation tests
 addopts = "-p no:doctest --strict-markers"
