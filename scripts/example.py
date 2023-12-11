@@ -13,3 +13,7 @@ def add_cli(a: int, b:int) -> None:
         b: the second number
     """
     logger.info(f"The sum of {a} and {b} is {add(a, b)}")
+
+if __name__ == "__main__":
+    logging.basicConfig(level=logging.DEBUG, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+    tyro.cli(add_cli)

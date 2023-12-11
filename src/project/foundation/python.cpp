@@ -1,6 +1,6 @@
 #include <pybind11/pybind11.h>
 #include <pybind11/stl.h>
-#include "../../../example.hpp"
+#include "../../../include/foundation/example.hpp"
 
 // NOTE: This sets compile time level. In addition, you need to set the
 // runtime level low enough to show these (e.g. trace for everything)
@@ -26,7 +26,7 @@ PYBIND11_MODULE(foundation, m) {
       "Set spd log level. Supported levels are: trace, debug, info, warn, error, critical, off.");
 
   m.def(
-    "add", add, R"pbdoc(
+    "add", add, "Add two numbers", py::arg("a"), py::arg("b"), R"pbdoc(
         Add two numbers
   )pbdoc");
 }

@@ -30,11 +30,11 @@ def build() -> None:
     subprocess.run(["ninja", "-C", str(build_path)])
 
     # Make sure that target was built
-    target_path = build_path / "src" / "gav" / "foundation" / MODULE_NAME
+    target_path = build_path / "src" / "project" / "foundation" / MODULE_NAME
     assert target_path.exists()
 
     # Replace or create symlink
-    deploy_path = Path("src/gav") / MODULE_NAME
+    deploy_path = Path("src/project") / MODULE_NAME
     if deploy_path.is_symlink():
         deploy_path.unlink()
 
@@ -47,7 +47,7 @@ def clean() -> None:
     shutil.rmtree(BUILD_DIR, ignore_errors=True)
 
     # Remove the symlink, if any
-    deploy_path = Path(f"src/gav/{MODULE_NAME}")
+    deploy_path = Path(f"src/project/{MODULE_NAME}")
     if deploy_path.is_symlink():
         deploy_path.unlink()
 
