@@ -135,3 +135,8 @@ dmypy.json
 
 # Editor Configs
 .vscode/
+
+
+cpp_executables/
+.ruff_cache/
+
