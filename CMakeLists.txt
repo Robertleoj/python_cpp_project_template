@@ -14,3 +14,4 @@ option(TRACY_ENABLE "" OFF)
 add_subdirectory(external/tracy)
 
 add_subdirectory(src)
+add_subdirectory(cpp_scripts)
