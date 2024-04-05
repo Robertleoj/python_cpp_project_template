@@ -71,6 +71,10 @@ def build() -> None:
 
     symlink_executables(cpp_script_path, cpp_executables_path)
 
+    subprocess.run(
+        ["stubgen", "-p", "foundation", "-o", "./src/project", "--include-docstring"],
+        env=dict(os.environ, PYTHONPATH="./src/project"),
+    )
 
 def clean() -> None:
     """Clean the build folder and remove the symlink, if any."""
